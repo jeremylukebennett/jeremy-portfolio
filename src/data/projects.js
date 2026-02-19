@@ -1,4 +1,5 @@
 import InteractivePricingComponent from '../projects/InteractivePricingComponent'
+import HolidayFlashSaleBanner from '../projects/HolidayFlashSaleBanner'
 
 const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
 
@@ -11,12 +12,12 @@ const projects = [
     cardSize: 'wide',
     thumbnail: withBase('assets/thumbnails/holiday-flash-sale.svg'),
     content: {
-      type: 'iframe',
-      src: withBase('projects/holiday-flash-sale/index.html'),
+      type: 'component',
+      component: HolidayFlashSaleBanner,
     },
     description:
-      'Interactive promotional banner built from custom HTML/CSS with a live JavaScript countdown. This implementation is wired as a standalone iframe preview so responsive behavior can be tested in real time.',
-    tags: ['email', 'html', 'css', 'javascript'],
+      'Interactive promotional banner component preserving the original campaign layout and countdown behavior, rebuilt as a native React preview for easier iteration and tighter integration.',
+    tags: ['email', 'react', 'design', 'countdown'],
     supportsResponsivePreview: true,
   },
   {

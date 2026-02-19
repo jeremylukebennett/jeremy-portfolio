@@ -7,9 +7,20 @@
     <style>
       @import url("https://use.typekit.net/nre7coe.css");
 
+      :root {
+        --orange: #ff9000;
+        --white: #ffffff;
+        --ink: #141414;
+      }
+
       * {
         box-sizing: border-box;
         font-family: europa, futura, sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
       }
 
       body {
@@ -17,161 +28,139 @@
         background: #111;
       }
 
-      #flash_sale_banner_section * {
-        line-height: 1.3;
+      #flash_sale_banner_section {
+        min-height: 100%;
+        padding: clamp(10px, 2.4vw, 22px);
       }
 
       #flash_sale_banner_container {
-        background-color: #ff9000;
+        position: relative;
+        min-height: clamp(320px, 86vh, 760px);
+        width: min(1280px, 100%);
+        margin: 0 auto;
+        display: grid;
+        align-items: center;
+        padding: clamp(18px, 4vw, 44px);
+        border: 2px solid rgba(255, 255, 255, 0.48);
+        background-color: var(--orange);
         background-image: url("https://cdn.shopify.com/s/files/1/0229/7157/files/gabb_orange_background.jpg?v=1701811294");
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: bottom center;
-        aspect-ratio: 2180 / 2900;
-        display: flex;
-        align-items: flex-start;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      #flash_sale_banner_container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          110deg,
+          rgba(0, 0, 0, 0.42) 0%,
+          rgba(0, 0, 0, 0.28) 42%,
+          rgba(0, 0, 0, 0.14) 100%
+        );
       }
 
       #flash_sale_banner_info_container {
-        margin: auto;
         position: relative;
+        z-index: 1;
+        width: min(780px, 100%);
       }
 
       .text_line {
-        color: white;
+        color: var(--white);
         margin: 0;
         text-align: center;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 0.98;
       }
 
       #line1 {
-        font-size: clamp(32px, 8.7vw, 67px);
+        font-size: clamp(24px, 5.2vw, 56px);
       }
 
       #line2 {
-        margin-bottom: -28px;
-        margin-top: -28px;
-        font-size: clamp(87px, 23vw, 177px);
+        margin-top: clamp(-4px, -0.7vw, -8px);
+        font-size: clamp(68px, 15vw, 168px);
       }
 
       #line3 {
-        margin-bottom: -15px;
-        font-size: clamp(57px, 15vw, 115px);
+        margin-top: clamp(-10px, -1.1vw, -16px);
+        font-size: clamp(38px, 8.6vw, 94px);
       }
 
       #line4 {
-        font-size: clamp(41px, 10.9vw, 84px);
-      }
-
-      #countdown ul {
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        width: 100%;
+        margin-top: clamp(4px, 0.8vw, 14px);
+        font-size: clamp(25px, 5.3vw, 58px);
       }
 
       .flash_sale_countdown_container {
-        color: #333;
-        margin: 0 auto;
-        text-align: center;
-        max-width: 650px;
+        margin-top: clamp(14px, 2.2vw, 24px);
+      }
+
+      #countdown ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(58px, 1fr));
+        gap: clamp(8px, 1.7vw, 14px);
       }
 
       .flash_sale_countdown_list_item {
-        display: inline-block;
-        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(84px, 13vw, 126px);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        background: rgba(0, 0, 0, 0.18);
+        color: var(--white);
         text-transform: uppercase;
-        margin: 0;
-        width: 10vw;
-        min-width: 84px;
-        font-size: clamp(20px, 3vw, 40px);
-        color: white;
+        font-size: clamp(12px, 1.8vw, 19px);
+        letter-spacing: 0.03em;
       }
 
       .flash_sale_countdown_list_item .flash_sale_countdown_date_text {
         display: block;
-      }
-
-      #days,
-      #hours,
-      #minutes,
-      #seconds {
-        font-size: clamp(40px, 5vw, 80px);
-        color: white;
+        font-size: clamp(24px, 4.6vw, 52px);
+        line-height: 1;
+        font-weight: 700;
       }
 
       #countdown-expired {
         display: none;
         margin-top: 18px;
-        color: white;
+        color: var(--white);
         font-size: clamp(24px, 4.4vw, 46px);
-        font-weight: bold;
+        font-weight: 700;
         text-align: center;
       }
 
-      @media only screen and (min-width: 768px) {
+      @media (min-width: 860px) {
         #flash_sale_banner_container {
-          aspect-ratio: unset;
-          height: 60vh;
-          min-height: 600px;
+          min-height: clamp(400px, 80vh, 720px);
+          background-position: right center;
         }
 
-        .text_line {
+        #flash_sale_banner_info_container {
+          width: min(760px, 70%);
+        }
+
+        .text_line,
+        #countdown-expired {
           text-align: left;
-          padding-left: 10px;
-        }
-
-        #line1 {
-          font-size: clamp(32px, 8.7vw, 45px);
-        }
-
-        #line2 {
-          font-size: clamp(87px, 23vw, 120px);
-        }
-
-        #line3 {
-          font-size: clamp(57px, 15vw, 80px);
-        }
-
-        #line4 {
-          font-size: clamp(41px, 10.9vw, 58px);
-        }
-
-        .flash_sale_countdown_container {
-          margin: 0;
-          text-align: center;
-          display: block;
-          max-width: 490px;
         }
 
         #countdown ul {
-          max-width: 475px;
+          max-width: 540px;
         }
 
         .flash_sale_countdown_list_item {
-          font-size: clamp(17px, 3vw, 20px);
-          width: unset;
-        }
-
-        #days,
-        #hours,
-        #minutes,
-        #seconds {
-          font-size: clamp(30px, 5vw, 40px);
-        }
-      }
-
-      @media only screen and (min-width: 992px) {
-        #flash_sale_banner_container {
-          min-height: 700px;
-        }
-      }
-
-      @media only screen and (min-width: 1500px) {
-        #flash_sale_banner_container {
-          height: 90vh;
+          align-items: flex-start;
+          padding-left: 12px;
         }
       }
     </style>
@@ -189,7 +178,7 @@
             <div id="countdown">
               <ul>
                 <li class="flash_sale_countdown_list_item">
-                  <span id="days" class="flash_sale_countdown_date_text"></span>days
+                  <span id="days" class="flash_sale_countdown_date_text"></span>Days
                 </li>
                 <li class="flash_sale_countdown_list_item">
                   <span id="hours" class="flash_sale_countdown_date_text"></span>Hours
@@ -198,7 +187,7 @@
                   <span id="minutes" class="flash_sale_countdown_date_text"></span>Min
                 </li>
                 <li class="flash_sale_countdown_list_item">
-                  <span id="seconds" class="flash_sale_countdown_date_text"></span>SEC
+                  <span id="seconds" class="flash_sale_countdown_date_text"></span>Sec
                 </li>
               </ul>
             </div>
@@ -216,21 +205,11 @@
         const hour = minute * 60
         const day = hour * 24
 
-        let today = new Date()
-        const dd = String(today.getDate()).padStart(2, '0')
-        const mm = String(today.getMonth() + 1).padStart(2, '0')
-        const yyyy = today.getFullYear()
-        const nextYear = yyyy + 1
-        const dayMonth = '12/11/'
+        const today = new Date()
+        const year = today.getFullYear()
+        const targetThisYear = new Date(`${year}-12-11T00:00:00`)
+        const target = today > targetThisYear ? new Date(`${year + 1}-12-11T00:00:00`) : targetThisYear
 
-        let targetDate = dayMonth + yyyy
-        const formattedToday = mm + '/' + dd + '/' + yyyy
-
-        if (formattedToday > targetDate) {
-          targetDate = dayMonth + nextYear
-        }
-
-        const countDown = new Date(targetDate).getTime()
         const days = document.getElementById('days')
         const hours = document.getElementById('hours')
         const minutes = document.getElementById('minutes')
@@ -239,10 +218,10 @@
         const countdownExpired = document.getElementById('countdown-expired')
 
         const timer = setInterval(() => {
-          const now = new Date().getTime()
-          const distance = countDown - now
+          const now = Date.now()
+          const distance = target.getTime() - now
 
-          if (distance < 0) {
+          if (distance <= 0) {
             if (countdown) {
               countdown.style.display = 'none'
             }
