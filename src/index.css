@@ -43,9 +43,9 @@
 
 @layer utilities {
   .name-letter {
-    color: #ffd600;
-    -webkit-text-stroke: 0.9px #0a0a0a;
-    text-stroke: 0.9px #0a0a0a;
+    color: #f2c800;
+    -webkit-text-stroke: 0.7px #0a0a0a;
+    text-stroke: 0.7px #0a0a0a;
     transition:
       color 120ms ease-out,
       text-shadow 120ms ease-out,

@@ -19,7 +19,7 @@ function Header() {
       <div className="mx-auto flex w-full max-w-[1500px] items-end justify-between gap-4 px-4 py-5 md:px-6 lg:px-8">
         <div>
           <h1
-            className="inline-block whitespace-pre text-5xl font-semibold tracking-tdrtight md:text-7xl"
+            className="inline-block whitespace-pre text-4xl font-semibold tracking-tdrtight md:text-6xl"
             onPointerLeave={() => setHoveredLetterIndex(null)}
           >
             {NAME_TEXT.split('').map((letter, index) => {
