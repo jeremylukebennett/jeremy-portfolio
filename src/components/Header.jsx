@@ -45,7 +45,7 @@ function Header() {
             })}
           </h1>
           <p className="mt-2 max-w-[42rem] text-sm font-semibold tracking-tdr text-brand-gray-400 md:text-base">
-            Front-End Web Developer · Digital Marketing · UX/UI Designer
+            Senior Marketing Manager | Web & Lifecycle | UX-Driven Digital Experience
           </p>
         </div>
 
