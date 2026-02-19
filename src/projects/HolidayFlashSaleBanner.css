@@ -95,7 +95,7 @@
   color: white;
 }
 
-@container (max-width: 767px) {
+@container (max-width: 765px) {
   #flash_sale_banner_info_container {
     padding: clamp(8px, 2vw, 16px);
   }
@@ -195,7 +195,7 @@
   }
 }
 
-@container (min-width: 768px) {
+@container (min-width: 766px) {
   .marked {
     border: solid yellow;
   }
