@@ -99,7 +99,8 @@ This app is static-ready and can deploy to:
 - Netlify
 - GitHub Pages
 
-For GitHub Pages on a subpath, set `base` in `vite.config.js` to your repo name.
+GitHub Pages is configured via `.github/workflows/deploy-pages.yml` and deploys on pushes to `main`.
+Expected URL: `https://jeremylukebennett.github.io/jeremy-portfolio/`.
 
 ## Safeguards
 

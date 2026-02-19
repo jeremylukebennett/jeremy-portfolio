@@ -1,5 +1,7 @@
 import InteractivePricingComponent from '../projects/InteractivePricingComponent'
 
+const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
+
 const projects = [
   {
     id: 'winter-sale-banner',
@@ -7,10 +9,10 @@ const projects = [
     subtitle: 'Cinesamples - Email Marketing',
     category: 'email',
     cardSize: 'wide',
-    thumbnail: '/assets/thumbnails/winter-sale.svg',
+    thumbnail: withBase('assets/thumbnails/winter-sale.svg'),
     content: {
       type: 'iframe',
-      src: '/projects/winter-sale/index.html',
+      src: withBase('projects/winter-sale/index.html'),
     },
     description:
       'A responsive email banner concept built with lightweight HTML/CSS blocks that mirror email client constraints. The preview is loaded in an iframe so breakpoint checks match real rendering behavior.',
@@ -23,7 +25,7 @@ const projects = [
     subtitle: 'React UI Component',
     category: 'component',
     cardSize: 'standard',
-    thumbnail: '/assets/thumbnails/pricing-component.svg',
+    thumbnail: withBase('assets/thumbnails/pricing-component.svg'),
     content: {
       type: 'component',
       component: InteractivePricingComponent,
@@ -39,7 +41,7 @@ const projects = [
     subtitle: 'Standalone Tool',
     category: 'tool',
     cardSize: 'large',
-    thumbnail: '/assets/thumbnails/sample-manager.svg',
+    thumbnail: withBase('assets/thumbnails/sample-manager.svg'),
     content: {
       type: 'external-link',
       url: 'https://example.com',
@@ -55,10 +57,10 @@ const projects = [
     subtitle: 'Web Campaign Surface',
     category: 'web',
     cardSize: 'tall',
-    thumbnail: '/assets/thumbnails/landing-hero.svg',
+    thumbnail: withBase('assets/thumbnails/landing-hero.svg'),
     content: {
       type: 'iframe',
-      src: '/projects/landing-hero/index.html',
+      src: withBase('projects/landing-hero/index.html'),
     },
     description:
       'A responsive hero section prototype with direct CTA hierarchy and tight spacing tuned for music product launches. The iframe preview makes it easy to validate breakpoints before implementation.',
