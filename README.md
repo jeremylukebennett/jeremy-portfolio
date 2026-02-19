@@ -1,6 +1,6 @@
 # Jeremy Portfolio
 
-Interactive single-page portfolio for a music producer and marketing operator working at the intersection of music tech, web development, and email marketing.
+Interactive single-page portfolio for Jeremy Bennett.
 
 The site is built around a bento-style project grid and a live preview modal with responsive viewport controls (preset breakpoints + drag resize).
 
