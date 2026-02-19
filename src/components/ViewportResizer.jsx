@@ -112,9 +112,12 @@ function ViewportResizer({ project }) {
 
     if (project.content.type === 'component') {
       const ProjectComponent = project.content.component
+      const wrapperClassName =
+        project.content.wrapperClassName ||
+        'min-h-[460px] bg-white p-4 text-black md:min-h-[560px] md:p-6'
 
       return (
-        <div className="min-h-[460px] bg-white p-4 text-black md:min-h-[560px] md:p-6">
+        <div className={wrapperClassName}>
           <ProjectComponent />
         </div>
       )

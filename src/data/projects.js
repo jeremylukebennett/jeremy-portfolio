@@ -14,6 +14,7 @@ const projects = [
     content: {
       type: 'component',
       component: HolidayFlashSaleBanner,
+      wrapperClassName: 'min-h-[460px] bg-black p-0 md:min-h-[560px]',
     },
     description:
       'Interactive promotional banner component preserving the original campaign layout and countdown behavior, rebuilt as a native React preview for easier iteration and tighter integration.',

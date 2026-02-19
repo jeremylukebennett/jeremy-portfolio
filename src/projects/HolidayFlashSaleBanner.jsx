@@ -42,9 +42,9 @@ function HolidayFlashSaleBanner() {
   }, [])
 
   return (
-    <section className="p-1 md:p-2">
+    <section className="h-full w-full p-0">
       <div
-        className="relative mx-auto grid h-[clamp(290px,62vh,500px)] w-full max-w-[1280px] items-start overflow-hidden border border-white/35 px-3 py-4 text-white md:h-[clamp(360px,68vh,540px)] md:px-6 md:py-7"
+        className="relative grid h-full min-h-[460px] w-full items-start overflow-hidden border border-white/25 px-3 py-4 text-white md:min-h-[560px] md:px-6 md:py-7"
         style={{
           backgroundColor: '#ff9000',
           backgroundImage:
@@ -54,7 +54,7 @@ function HolidayFlashSaleBanner() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/34 via-black/20 to-black/8" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/28 via-black/14 to-black/6" />
 
         <div className="relative z-10 w-full max-w-[760px]">
           <p
