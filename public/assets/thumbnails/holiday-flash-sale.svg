@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#FF9000" />
+  <rect x="58" y="58" width="1484" height="784" fill="#FC7A00" stroke="#F5F5F5" stroke-width="4" />
+  <rect x="120" y="145" width="620" height="66" fill="#0A0A0A" />
+  <rect x="120" y="240" width="900" height="170" fill="#FFFFFF" />
+  <rect x="120" y="430" width="720" height="105" fill="#0A0A0A" />
+  <rect x="120" y="560" width="930" height="82" fill="#FFFFFF" />
+  <rect x="120" y="690" width="1180" height="90" fill="#0A0A0A" />
+  <text x="142" y="190" fill="#F5F5F5" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.5">Holiday Flash Sale</text>
+  <text x="142" y="355" fill="#0A0A0A" font-family="Inter, Arial, sans-serif" font-size="150" font-weight="700" letter-spacing="-4">10% OFF</text>
+  <text x="142" y="506" fill="#F5F5F5" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="-2">Everything</text>
+  <text x="142" y="622" fill="#0A0A0A" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-1.8">This Week Only</text>
+  <text x="142" y="752" fill="#F5F5F5" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.4">Countdown Banner</text>
+</svg>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday Flash Sale Banner</title>
+    <style>
+      @import url("https://use.typekit.net/nre7coe.css");
+
+      * {
+        box-sizing: border-box;
+        font-family: europa, futura, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: #111;
+      }
+
+      #flash_sale_banner_section * {
+        line-height: 1.3;
+      }
+
+      #flash_sale_banner_container {
+        background-color: #ff9000;
+        background-image: url("https://cdn.shopify.com/s/files/1/0229/7157/files/gabb_orange_background.jpg?v=1701811294");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        aspect-ratio: 2180 / 2900;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #flash_sale_banner_info_container {
+        margin: auto;
+        position: relative;
+      }
+
+      .text_line {
+        color: white;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      #line1 {
+        font-size: clamp(32px, 8.7vw, 67px);
+      }
+
+      #line2 {
+        margin-bottom: -28px;
+        margin-top: -28px;
+        font-size: clamp(87px, 23vw, 177px);
+      }
+
+      #line3 {
+        margin-bottom: -15px;
+        font-size: clamp(57px, 15vw, 115px);
+      }
+
+      #line4 {
+        font-size: clamp(41px, 10.9vw, 84px);
+      }
+
+      #countdown ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+      }
+
+      .flash_sale_countdown_container {
+        color: #333;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 650px;
+      }
+
+      .flash_sale_countdown_list_item {
+        display: inline-block;
+        list-style-type: none;
+        text-transform: uppercase;
+        margin: 0;
+        width: 10vw;
+        min-width: 84px;
+        font-size: clamp(20px, 3vw, 40px);
+        color: white;
+      }
+
+      .flash_sale_countdown_list_item .flash_sale_countdown_date_text {
+        display: block;
+      }
+
+      #days,
+      #hours,
+      #minutes,
+      #seconds {
+        font-size: clamp(40px, 5vw, 80px);
+        color: white;
+      }
+
+      #countdown-expired {
+        display: none;
+        margin-top: 18px;
+        color: white;
+        font-size: clamp(24px, 4.4vw, 46px);
+        font-weight: bold;
+        text-align: center;
+      }
+
+      @media only screen and (min-width: 768px) {
+        #flash_sale_banner_container {
+          aspect-ratio: unset;
+          height: 60vh;
+          min-height: 600px;
+        }
+
+        .text_line {
+          text-align: left;
+          padding-left: 10px;
+        }
+
+        #line1 {
+          font-size: clamp(32px, 8.7vw, 45px);
+        }
+
+        #line2 {
+          font-size: clamp(87px, 23vw, 120px);
+        }
+
+        #line3 {
+          font-size: clamp(57px, 15vw, 80px);
+        }
+
+        #line4 {
+          font-size: clamp(41px, 10.9vw, 58px);
+        }
+
+        .flash_sale_countdown_container {
+          margin: 0;
+          text-align: center;
+          display: block;
+          max-width: 490px;
+        }
+
+        #countdown ul {
+          max-width: 475px;
+        }
+
+        .flash_sale_countdown_list_item {
+          font-size: clamp(17px, 3vw, 20px);
+          width: unset;
+        }
+
+        #days,
+        #hours,
+        #minutes,
+        #seconds {
+          font-size: clamp(30px, 5vw, 40px);
+        }
+      }
+
+      @media only screen and (min-width: 992px) {
+        #flash_sale_banner_container {
+          min-height: 700px;
+        }
+      }
+
+      @media only screen and (min-width: 1500px) {
+        #flash_sale_banner_container {
+          height: 90vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="flash_sale_banner_section">
+      <div id="flash_sale_banner_container" class="unmarked">
+        <div id="flash_sale_banner_info_container" class="unmarked">
+          <p class="text_line" id="line1">HOLIDAY FLASH SALE</p>
+          <p class="text_line" id="line2">10% OFF</p>
+          <p class="text_line" id="line3">EVERYTHING</p>
+          <p class="text_line" id="line4">THIS WEEK ONLY</p>
+
+          <div class="flash_sale_countdown_container">
+            <div id="countdown">
+              <ul>
+                <li class="flash_sale_countdown_list_item">
+                  <span id="days" class="flash_sale_countdown_date_text"></span>days
+                </li>
+                <li class="flash_sale_countdown_list_item">
+                  <span id="hours" class="flash_sale_countdown_date_text"></span>Hours
+                </li>
+                <li class="flash_sale_countdown_list_item">
+                  <span id="minutes" class="flash_sale_countdown_date_text"></span>Min
+                </li>
+                <li class="flash_sale_countdown_list_item">
+                  <span id="seconds" class="flash_sale_countdown_date_text"></span>SEC
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p id="countdown-expired">Offer Ended</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      ;(() => {
+        const second = 1000
+        const minute = second * 60
+        const hour = minute * 60
+        const day = hour * 24
+
+        let today = new Date()
+        const dd = String(today.getDate()).padStart(2, '0')
+        const mm = String(today.getMonth() + 1).padStart(2, '0')
+        const yyyy = today.getFullYear()
+        const nextYear = yyyy + 1
+        const dayMonth = '12/11/'
+
+        let targetDate = dayMonth + yyyy
+        const formattedToday = mm + '/' + dd + '/' + yyyy
+
+        if (formattedToday > targetDate) {
+          targetDate = dayMonth + nextYear
+        }
+
+        const countDown = new Date(targetDate).getTime()
+        const days = document.getElementById('days')
+        const hours = document.getElementById('hours')
+        const minutes = document.getElementById('minutes')
+        const seconds = document.getElementById('seconds')
+        const countdown = document.getElementById('countdown')
+        const countdownExpired = document.getElementById('countdown-expired')
+
+        const timer = setInterval(() => {
+          const now = new Date().getTime()
+          const distance = countDown - now
+
+          if (distance < 0) {
+            if (countdown) {
+              countdown.style.display = 'none'
+            }
+            if (countdownExpired) {
+              countdownExpired.style.display = 'block'
+            }
+            clearInterval(timer)
+            return
+          }
+
+          if (days) {
+            days.innerText = Math.floor(distance / day)
+          }
+          if (hours) {
+            hours.innerText = Math.floor((distance % day) / hour)
+          }
+          if (minutes) {
+            minutes.innerText = Math.floor((distance % hour) / minute)
+          }
+          if (seconds) {
+            seconds.innerText = Math.floor((distance % minute) / second)
+          }
+        }, 250)
+      })()
+    </script>
+  </body>
+</html>

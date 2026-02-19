@@ -4,6 +4,22 @@ const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, ''
 
 const projects = [
   {
+    id: 'holiday-flash-sale-banner',
+    title: 'Holiday Flash Sale Banner',
+    subtitle: 'Interactive Countdown Campaign',
+    category: 'email',
+    cardSize: 'wide',
+    thumbnail: withBase('assets/thumbnails/holiday-flash-sale.svg'),
+    content: {
+      type: 'iframe',
+      src: withBase('projects/holiday-flash-sale/index.html'),
+    },
+    description:
+      'Interactive promotional banner built from custom HTML/CSS with a live JavaScript countdown. This implementation is wired as a standalone iframe preview so responsive behavior can be tested in real time.',
+    tags: ['email', 'html', 'css', 'javascript'],
+    supportsResponsivePreview: true,
+  },
+  {
     id: 'winter-sale-banner',
     title: 'Winter Sale Banner',
     subtitle: 'Cinesamples - Email Marketing',
