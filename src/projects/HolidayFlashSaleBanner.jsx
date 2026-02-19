@@ -42,42 +42,42 @@ function HolidayFlashSaleBanner() {
   }, [])
 
   return (
-    <section className="p-2 md:p-4">
+    <section className="p-1 md:p-2">
       <div
-        className="relative mx-auto grid min-h-[320px] w-full max-w-[1280px] items-center overflow-hidden border-2 border-white/50 px-4 py-5 text-white md:min-h-[460px] md:px-8 md:py-9"
+        className="relative mx-auto grid h-[clamp(290px,62vh,500px)] w-full max-w-[1280px] items-start overflow-hidden border border-white/35 px-3 py-4 text-white md:h-[clamp(360px,68vh,540px)] md:px-6 md:py-7"
         style={{
           backgroundColor: '#ff9000',
           backgroundImage:
             "url('https://cdn.shopify.com/s/files/1/0229/7157/files/gabb_orange_background.jpg?v=1701811294')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-black/10" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/34 via-black/20 to-black/8" />
 
         <div className="relative z-10 w-full max-w-[760px]">
           <p
             className="m-0 text-center font-semibold leading-[0.98] tracking-[0.04em] md:text-left"
-            style={{ fontSize: 'clamp(24px, 5.2vw, 56px)' }}
+            style={{ fontSize: 'clamp(21px, 4.8vw, 46px)' }}
           >
             HOLIDAY FLASH SALE
           </p>
           <p
             className="m-0 text-center font-semibold leading-[0.98] tracking-[0.04em] md:text-left"
-            style={{ fontSize: 'clamp(68px, 15vw, 168px)', marginTop: 'clamp(-8px, -0.8vw, -12px)' }}
+            style={{ fontSize: 'clamp(56px, 12.8vw, 132px)', marginTop: 'clamp(-8px, -0.8vw, -12px)' }}
           >
             10% OFF
           </p>
           <p
             className="m-0 text-center font-semibold leading-[0.98] tracking-[0.04em] md:text-left"
-            style={{ fontSize: 'clamp(38px, 8.6vw, 94px)', marginTop: 'clamp(-12px, -1vw, -16px)' }}
+            style={{ fontSize: 'clamp(33px, 7.2vw, 74px)', marginTop: 'clamp(-10px, -0.9vw, -14px)' }}
           >
             EVERYTHING
           </p>
           <p
             className="m-0 text-center font-semibold leading-[0.98] tracking-[0.04em] md:text-left"
-            style={{ fontSize: 'clamp(25px, 5.3vw, 58px)', marginTop: 'clamp(6px, 0.8vw, 14px)' }}
+            style={{ fontSize: 'clamp(21px, 4.6vw, 43px)', marginTop: 'clamp(5px, 0.7vw, 11px)' }}
           >
             THIS WEEK ONLY
           </p>
@@ -87,7 +87,7 @@ function HolidayFlashSaleBanner() {
               Offer Ended
             </p>
           ) : (
-            <ul className="mt-4 grid grid-cols-4 gap-2 p-0 md:max-w-[560px] md:gap-3">
+            <ul className="mt-4 grid grid-cols-4 gap-2 p-0 md:max-w-[520px] md:gap-3">
               {[
                 { label: 'Days', value: timeLeft.days },
                 { label: 'Hours', value: timeLeft.hours },
@@ -96,9 +96,9 @@ function HolidayFlashSaleBanner() {
               ].map((item) => (
                 <li
                   key={item.label}
-                  className="flex min-h-[82px] list-none flex-col items-center justify-center border border-white/45 bg-black/20 text-[11px] tracking-[0.03em] md:min-h-[108px] md:items-start md:pl-3 md:text-[15px]"
+                  className="flex min-h-[72px] list-none flex-col items-center justify-center border border-white/40 bg-black/18 text-[10px] tracking-[0.03em] md:min-h-[96px] md:items-start md:pl-3 md:text-[14px]"
                 >
-                  <span className="text-[24px] leading-none md:text-[42px]">{item.value}</span>
+                  <span className="text-[22px] leading-none md:text-[38px]">{item.value}</span>
                   {item.label}
                 </li>
               ))}
