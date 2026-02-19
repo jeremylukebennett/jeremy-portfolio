@@ -45,7 +45,7 @@ function Header() {
             })}
           </h1>
           <p className="mt-2 max-w-[42rem] text-sm font-semibold tracking-tdr text-brand-gray-400 md:text-base">
-            Music Technology, Web Development, and Email Marketing Operator
+            Front-End Web Developer · Digital Marketing · UX/UI Designer
           </p>
         </div>
 
