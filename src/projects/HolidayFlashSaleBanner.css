@@ -195,8 +195,10 @@
   }
 }
 
-@container (min-width: 480px) and (max-width: 991px) {
+@container (min-width: 480px) and (max-width: 765px) {
   #flash_sale_banner_container {
+    aspect-ratio: 3600 / 2800;
+    min-height: 420px;
     background-size: cover;
     background-position: center 72%;
   }
