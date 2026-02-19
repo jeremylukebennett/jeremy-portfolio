@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400" fill="none">
+  <rect width="900" height="1400" fill="#0A0A0A" />
+  <rect x="40" y="40" width="820" height="1320" fill="#1A1A1A" stroke="#2A2A2A" stroke-width="4" />
+  <rect x="76" y="86" width="748" height="56" fill="#0A0A0A" />
+  <rect x="76" y="176" width="748" height="780" fill="#0A0A0A" />
+  <rect x="102" y="256" width="620" height="240" fill="#FFD600" />
+  <rect x="102" y="528" width="560" height="52" fill="#2A2A2A" />
+  <rect x="102" y="598" width="520" height="52" fill="#2A2A2A" />
+  <rect x="102" y="690" width="260" height="58" fill="#FFD600" />
+  <rect x="102" y="768" width="260" height="58" fill="#E91E90" />
+  <rect x="102" y="992" width="700" height="300" fill="#0A0A0A" stroke="#2A2A2A" stroke-width="4" />
+  <text x="126" y="338" fill="#000" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-2.2">LANDING HERO</text>
+</svg>

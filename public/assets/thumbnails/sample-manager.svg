@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" fill="none">
+  <rect width="1600" height="1200" fill="#0A0A0A" />
+  <rect x="70" y="70" width="1460" height="1060" fill="#1A1A1A" stroke="#2A2A2A" stroke-width="6" />
+  <rect x="120" y="130" width="1360" height="76" fill="#0A0A0A" />
+  <rect x="120" y="240" width="340" height="830" fill="#0A0A0A" />
+  <rect x="490" y="240" width="990" height="830" fill="#0A0A0A" />
+  <rect x="170" y="290" width="240" height="56" fill="#FFD600" />
+  <rect x="170" y="370" width="190" height="32" fill="#E91E90" />
+  <rect x="170" y="432" width="190" height="32" fill="#00E676" />
+  <rect x="540" y="300" width="880" height="92" fill="#FFD600" />
+  <rect x="540" y="420" width="760" height="36" fill="#2A2A2A" />
+  <rect x="540" y="472" width="800" height="36" fill="#2A2A2A" />
+  <rect x="540" y="524" width="700" height="36" fill="#2A2A2A" />
+  <text x="560" y="360" fill="#000" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-1.4">SAMPLE LIBRARY MANAGER</text>
+</svg>
