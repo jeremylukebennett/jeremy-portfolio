@@ -30,6 +30,10 @@ The site is built around a bento-style project grid and a live preview modal wit
 - Tailwind CSS
 - Framer Motion
 
+## Design System
+
+- Rigid style guide: `docs/PORTFOLIO_DESIGN_SYSTEM.md`
+
 ## Local Setup
 
 ```bash
