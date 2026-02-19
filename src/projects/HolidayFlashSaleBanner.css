@@ -10,6 +10,7 @@
 #flash_sale_banner_section {
   width: 100%;
   height: 100%;
+  container-type: inline-size;
 }
 
 #flash_sale_banner_container {
@@ -94,7 +95,7 @@
   color: white;
 }
 
-@media only screen and (max-width: 767px) {
+@container (max-width: 767px) {
   #flash_sale_banner_info_container {
     padding: clamp(8px, 2vw, 16px);
   }
@@ -135,7 +136,7 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@container (max-width: 480px) {
   .marked {
     border: solid blue;
   }
@@ -145,7 +146,7 @@
   }
 }
 
-@media only screen and (max-width: 463px) {
+@container (max-width: 463px) {
   .text_line {
     letter-spacing: 0.35px;
   }
@@ -188,13 +189,13 @@
   }
 }
 
-@media only screen and (min-width: 480px) {
+@container (min-width: 480px) {
   .marked {
     border: solid red;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@container (min-width: 768px) {
   .marked {
     border: solid yellow;
   }
@@ -253,7 +254,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@container (min-width: 992px) {
   .marked {
     border: solid deeppink;
   }
@@ -265,13 +266,13 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@container (min-width: 1200px) {
   .marked {
     border: solid lime;
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@container (min-width: 1500px) {
   .marked {
     border: solid darkorange;
   }
