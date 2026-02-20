@@ -150,6 +150,7 @@ Rules:
 
 - `iframe`: standalone demos, isolated styles/scripts.
 - `component`: native React showcases (preferred for design-first portfolio pieces).
+- `image`: static visual assets presented in a framed preview.
 - `external-link`: screenshot + direct open action.
 
 ## Accessibility Baseline

@@ -5,6 +5,23 @@ const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, ''
 
 const projects = [
   {
+    id: 'end-of-summer-sale-email-art',
+    title: 'End Of Summer Sale Artwork',
+    subtitle: 'Cinesamples - Email Campaign',
+    category: 'email',
+    cardSize: 'tall',
+    thumbnail: withBase('assets/thumbnails/end-of-summer-sale-email.jpg'),
+    content: {
+      type: 'image',
+      src: withBase('assets/images/end-of-summer-sale-email.jpg'),
+      alt: 'Cinesamples end of summer sale email artwork',
+    },
+    description:
+      'Static promotional artwork built for an email campaign featuring a bold product collage and deadline-forward hierarchy. Added as an image-first asset to preserve the original delivered visual.',
+    tags: ['email', 'campaign', 'art-direction'],
+    supportsResponsivePreview: false,
+  },
+  {
     id: 'holiday-flash-sale-banner',
     title: 'Holiday Flash Sale Banner',
     subtitle: 'Interactive Countdown Campaign',

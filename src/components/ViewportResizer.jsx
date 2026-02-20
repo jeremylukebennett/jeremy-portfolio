@@ -99,6 +99,21 @@ function ViewportResizer({ project }) {
   }
 
   const contentNode = useMemo(() => {
+    if (project.content.type === 'image') {
+      const imageAlt = project.content.alt || `${project.title} preview`
+
+      return (
+        <div className="flex min-h-[380px] items-center justify-center bg-brand-black p-3 md:p-6">
+          <img
+            src={project.content.src}
+            alt={imageAlt}
+            className="h-auto max-h-[78vh] w-full max-w-[860px] border border-brand-gray-800 object-contain"
+            loading="lazy"
+          />
+        </div>
+      )
+    }
+
     if (project.content.type === 'iframe') {
       return (
         <iframe

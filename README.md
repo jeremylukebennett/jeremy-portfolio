@@ -9,9 +9,10 @@ The site is built around a bento-style project grid and a live preview modal wit
 - Bento grid with asymmetric card sizing (`standard`, `wide`, `tall`, `large`)
 - Animated category filters (`All`, `Web`, `Email`, `Tools`, `Components`)
 - Shared-layout card expansion into a modal using Framer Motion
-- Three project content types:
+- Four project content types:
   - `iframe` for standalone HTML demos
   - `component` for in-app React previews
+  - `image` for static campaign artwork previews
   - `external-link` for tools/apps hosted elsewhere
 - Responsive preview controls inside modal:
   - Presets: `1280`, `768`, `375`
@@ -84,6 +85,7 @@ Add one object to `src/data/projects.js`:
     type: 'iframe',
     src: '/projects/example/index.html',
     // or: type: 'component', component: MyPreviewComponent
+    // or: type: 'image', src: 'https://example.com/campaign.jpg', alt: 'Preview alt text'
     // or: type: 'external-link', url: 'https://example.com'
   },
   description: 'What it is and why it matters.',
